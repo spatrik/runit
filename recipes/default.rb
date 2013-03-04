@@ -49,7 +49,7 @@ when "rhel"
   if node["platform_version"].to_i >= 6
     package "glibc-static"
   else
-    package "buildsys-macros"
+    #package "buildsys-macros"
   end
 
   cookbook_file "#{Chef::Config[:file_cache_path]}/runit-2.1.1.tar.gz" do
